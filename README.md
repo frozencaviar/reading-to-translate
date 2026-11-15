@@ -4,6 +4,24 @@
 
 Zhang, Y., Yao, X., & Li, D. (2026). Reading to Translate or Translating to Read? Modeling Translators’ Eye Movements with Multilingual Pre-Trained Models. *Journal of Eye Movement Research, 19*(3), Article 66. [https://doi.org/10.3390/jemr19030066](https://doi.org/10.3390/jemr19030066)
 
+## About the study
+
+When translators look back at a source sentence or reread a phrase they have just written, which properties of the text predict how long they spend reading it? We recorded eye movements from 26 student translators whose first language was Chinese. Each participant translated and post-edited in both directions between English and Chinese. We compared word predictability (surprisal) from mGPT with translation surprisal and attention measures from NLLB-200.
+
+The strongest predictor depended on where participants were looking. NMT encoder self-attention showed the strongest association with source-text reading time, while language-model surprisal was the strongest predictor of target-text reading time. Source-reading effects were stronger in English-to-Chinese tasks, and target-reading effects were stronger in Chinese-to-English tasks.
+
+| Source-text reading | Target-text reading |
+| --- | --- |
+| ![Heatmap of source-reading coefficients at token and segment levels](presentation/source-reading.png) | ![Heatmap of target-reading coefficients at token and segment levels](presentation/target-reading.png) |
+
+The panels show standardized coefficients at token and segment levels. The outlined cells highlight the predictor discussed in each panel. Black dots mark FDR-adjusted *q* < .05. Figures from slide 12 of the authors’ July 2026 presentation.
+
+## Presentation
+
+[Download the presentation (PDF, 17 slides)](presentation/reading-to-translate.pdf?raw=true)
+
+The 17-slide presentation covers the study design, model comparisons and results.
+
 ## Quickstart
 
 After installing the dependencies below, supply the directory containing your session tables and run the cross-validated analysis:
@@ -13,7 +31,7 @@ bash extract.sh "/path/to/Tables"
 python reproduce_yiyu_analysis.py --analysis-only
 ```
 
-This code reproduces the feature-extraction and statistical-modeling workflow for the English–Chinese translation and post-editing study. Supply your own authorized CRITT-format tables. The archive contains code only. Run the commands below from the extracted package directory.
+This code reproduces the feature-extraction and statistical-modeling workflow for the English–Chinese translation and post-editing study. Supply your own authorized CRITT-format tables. The study tables must be supplied separately. Run the commands below from the extracted package directory.
 
 ## Installation
 
