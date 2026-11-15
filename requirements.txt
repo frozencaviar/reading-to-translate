@@ -1,0 +1,12 @@
+numpy<2
+pandas>=1.5,<3
+scipy
+statsmodels
+scikit-learn
+matplotlib
+seaborn
+wordfreq
+torch
+transformers>=4.30,<4.45
+sentencepiece
+protobuf

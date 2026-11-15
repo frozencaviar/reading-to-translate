@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.DS_Store
+._*
+data/
+Tables/
+model-input/
+attention-norm*/
+figures*/
+*.st
+*.sg
+*.tt
+*.ag
+*.tsv
+*.csv
+*.json
